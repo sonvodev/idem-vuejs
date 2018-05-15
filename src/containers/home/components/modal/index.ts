@@ -40,8 +40,8 @@ class HomePreviewModal extends Vue{
   get type(){
     return this.news.type_of_material;
   }
-  get byLine(){
-    return this.news.byline.original;
+  get source(){
+    return this.news.source;
   }
   get keywords(): string[]{
     return this.news.keywords
