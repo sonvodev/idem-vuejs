@@ -50,7 +50,7 @@ class HomePreviewModal extends Vue{
     if(this.news.multimedia && this.news.multimedia.length > 0){
       return  'https://static01.nyt.com/' + this.news.multimedia[0].url ;
     }
-    return '/static/images/world-cat/1.jpg';
+    return 'static/images/world-cat/1.jpg';
   }
   get pubDate(){
     return new Date(this.news.pub_date).toLocaleDateString()
