@@ -1,0 +1,10 @@
+<div>
+  <ul>
+    <li v-for="(news,index) in coListNews" :key="index">
+      <p>{{news.snippet}}</p>
+      <p>{{getDate(news.pub_date)}}</p>
+      <p>{{news.source}}</p>
+    </li>
+  </ul>
+
+</div>
