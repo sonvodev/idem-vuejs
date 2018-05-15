@@ -14,6 +14,6 @@ export class HomeService extends BaseService implements IHomeService {
   }
   getListNews(param: INewsParamter) {
     return super.select(UrlConstants.NewRoutes.GetList, param)
-      .catch(error => console.log(error))
+      .catch(error => Promise.reject(error))
   }
 }

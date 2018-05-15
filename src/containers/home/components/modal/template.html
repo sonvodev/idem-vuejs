@@ -1,0 +1,51 @@
+<el-dialog :title="title" :width="dtDefaultSettingModalWidth" :fullscreen="dtDefaultSettingModelFullScreen" top="5vh" :visible.sync="visible">
+  <div class="single-blog-page-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="single-image" v-if="headImage">
+            <img :src="headImage" alt="Blog single photo">
+          </div>
+
+          <p v-html="textContent">Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is has been the try’s stasn ndard
+            dummy text ever since the 1500s, when an unknown printer took a galley of it to make. Lorem Ipsum is the simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has been the indus try’s standard they dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scram bled it to make a type specimen
+            book.
+          </p>
+          <div class="share-section">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 life-style">
+                <span class="author">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-user-o" aria-hidden="true"></i> {{byLine}} </a>
+                </span>
+                <span class="comment">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-comment-o" aria-hidden="true"></i> {{wordCount}}</a>
+                </span>
+                <span class="date">
+                  <i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{pubDate}}
+                </span>
+                <span class="cat">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i> {{type}} </a>
+                </span>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <ul class="share-link" v-if="keywords">
+                  <li class="hvr-bounce-to-right">
+                    <a href="javascript:void(0);"> Tags:</a>
+                  </li>
+                  <li class="hvr-bounce-to-right" v-for="(tag, index) in keywords" :key="index" v-if="index < 3">
+                    <a href="javascript:void(0);" v-html="tag.value"> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</el-dialog>

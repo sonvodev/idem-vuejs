@@ -5,8 +5,14 @@ import { StoreTypes } from '../../store';
 import { INewsListing } from '../../models';
 import axios from 'axios'
 import { AxiosConfiguration } from '../../utils/AxiosConfiguration';
+import AppHeaderComponent from './components/AppHeaderComponent.vue'
+import AppFooterComponent from './components/AppFooterComponent.vue'
 @Component({
-  template: require('./template.html')
+  template: require('./template.html'),
+  components:{
+    'app-header': AppHeaderComponent,
+    'app-footer': AppFooterComponent
+  }
 })
 
 class App extends Vue {

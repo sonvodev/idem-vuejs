@@ -4,8 +4,6 @@ import { IHomeStoreState } from './home.states';
 import { HomeStoreTypes as Types } from './home.types';
 const mutations: MutationTree<IHomeStoreState> = {
   [Types.SET_LIST_NEWS]: (state: IHomeStoreState, payload) => {
-
-    console.log(payload)
     state.listNews = payload.docs
   }
 }

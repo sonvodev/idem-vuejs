@@ -28,6 +28,17 @@ export class AxiosConfiguration {
     switch (response.status) {
       case 200:
         response.data = new ApiResponse({ data: response.data.response, isSuccess: true })
+        break;
+        case 429:
+        response.data = new ApiResponse({ 
+          data:[], 
+          isSuccess: false,
+          exception:{
+            code: response.status,
+             message: response.statusText
+            } 
+          })
+        break;
     }
     return response.data
   }

@@ -4,13 +4,34 @@ import Vue from 'vue'
 import App from './containers/app/App.vue'
 import router from './router'
 import store from './store'
+import Component from 'vue-class-component';
 
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.config.productionTip = false;
+Vue.use(ElementUI);
+
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
+// new Vue({
+//   el: '#app',
+//   router,
+//   store,
+//   components: { App },
+//   template: '<App/>'
+// })
+@Component({
+  template:  '<App/>',
+  components: {App}
 })
+class RootApp extends Vue{
+  /**
+   *
+   */
+  constructor(props: any) {
+    super(props);
+    
+  }
+}
+
+new RootApp({el: '#app', router,store}).$mount()
