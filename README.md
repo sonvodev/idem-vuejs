@@ -1,4 +1,5 @@
-# trusting-social-assignment
+
+# structing-social-assignment
 
 > A simple website to display a list news getting from free NYTimes API
 
@@ -28,3 +29,4 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
